@@ -1,26 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f2f2f2;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrs Kurt ($MRSKURT) - The Hottest Memecoin on Base</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6a5acd;
+            --secondary: #ff69b4;
+            --accent: #00ff9d;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+        
+        .token-name {
+            margin-left: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .symbol {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(42, 42, 72, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .dexscreener {
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .dexscreener iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .socials {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .social-card {
+            background: rgba(42, 42, 72, 0.6);
+            border-radius: 15px;
+            padding: 1.5rem;
+            width: 180px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .social-icon img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+        
+        .social-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .social-card a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(26, 26, 46, 0.8);
+            margin-top: 3rem;
+        }
+        
+        .disclaimer {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .socials {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-card {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .dexscreener iframe {
+                height: 400px;
+            }
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0.3;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100vw) rotate(360deg);
+            }
+        }
+        
+        .buy-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(42, 42, 72, 0.6);
+            border-radius: 15px;
+        }
+        
+        .buy-section h2 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-  <h1>Welcome to My Page</h1>
-  <p>This is a simple index.html file.</p>
+    <div class="particles" id="particles"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="https://i.imgur.com/nbCQFnF.png" alt="Mrs Kurt Logo" class="logo">
+            <div class="token-name">
+                <h1>Mrs Kurt</h1>
+                <div class="symbol">$MRSKURT</div>
+            </div>
+        </div>
+        <p>The memecoin that's taking Base chain by storm!</p>
+    </header>
+    
+    <div class="container">
+        <section class="intro">
+            <h2>Who is Mrs Kurt?</h2>
+            <p>Mrs Kurt is the legendary memecoin that brings the fun back to cryptocurrency. Built on the Base blockchain, $MRSKURT combines viral potential with real utility.</p>
+            <p>Join our growing community and be part of the next big meme revolution!</p>
+            <a href="https://app.uniswap.org/explore/tokens/base/0x3ef96Ab2e783C939Cf007af8dBa350cF66128934" class="cta-button">Buy $MRSKURT Now</a>
+        </section>
+        
+        <section class="buy-section">
+            <h2>How to Buy $MRSKURT</h2>
+            <p>1. Get a Web3 wallet like MetaMask</p>
+            <p>2. Add Base network to your wallet</p>
+            <p>3. Swap ETH for $MRSKURT on Uniswap</p>
+            <a href="https://app.uniswap.org/explore/tokens/base/0x3ef96Ab2e783C939Cf007af8dBa350cF66128934" class="cta-button">Buy on Uniswap</a>
+        </section>
+        
+        <section class="dexscreener">
+            <h2>Live Chart</h2>
+            <p>Track $MRSKURT in real-time</p>
+            <iframe src="https://dexscreener.com/base/0xca148603dCFb81937E81aa530355187D889eB974?embed=1&info=0&theme=dark"></iframe>
+        </section>
+        
+        <section class="socials">
+            <div class="social-card">
+                <div class="social-icon">
+                    <img src="https://i.imgur.com/6hMlumE.jpeg" alt="Dexscreener Icon">
+                </div>
+                <h3>Dexscreener</h3>
+                <p>Track our progress</p>
+                <a href="https://dexscreener.com/base/0xca148603dCFb81937E81aa530355187D889eB974" target="_blank">View Chart</a>
+            </div>
+            
+            <div class="social-card">
+                <div class="social-icon">
+                    <img src="https://i.imgur.com/P7GUUZl.png" alt="Uniswap Icon">
+                </div>
+                <h3>Uniswap</h3>
+                <p>Trade $MRSKURT</p>
+                <a href="https://app.uniswap.org/explore/tokens/base/0x3ef96Ab2e783C939Cf007af8dBa350cF66128934" target="_blank">Buy Now</a>
+            </div>
+            
+            <div class="social-card">
+                <div class="social-icon">
+                    <img src="https://i.imgur.com/H6lfRG5.png" alt="Twitter Icon">
+                </div>
+                <h3>Twitter</h3>
+                <p>Follow us</p>
+                <a href="https://x.com/Mrs_Kurt_onbase" target="_blank">@Mrs_Kurt_onbase</a>
+            </div>
+            
+            <div class="social-card">
+                <div class="social-icon">
+                    <img src="https://i.imgur.com/DjH5fYs.png" alt="Telegram Icon">
+                </div>
+                <h3>Telegram</h3>
+                <p>Join community</p>
+                <a href="https://t.me/MRS_KURT" target="_blank">Join Group</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="disclaimer">
+            <p><strong>Disclaimer:</strong> $MRSKURT is a meme coin with no intrinsic value or expectation of financial return. The coin is for entertainment purposes only. Please invest responsibly and never more than you can afford to lose.</p>
+            <p>© 2023 Mrs Kurt ($MRSKURT). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Create background particles
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles');
+            const numberOfParticles = 30;
+            
+            for (let i = 0; i < numberOfParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 30 + 10;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                
+                const animationDuration = Math.random() * 20 + 15;
+                particle.style.animationDuration = `${animationDuration}s`;
+                particle.style.animationDelay = `-${Math.random() * 20}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        });
+    </script>
 </body>
-</html>
+  </html>
