@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mrs Kurt ($MRSKURT) - The Hottest Memecoin on Base</title>
+    <title>Mrs Kurt ($MRSKURT) - The Ultimate Memecoin on Base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #6a5acd;
-            --secondary: #ff69b4;
-            --accent: #00ff9d;
+            --primary-blue: #0851EE;
+            --accent-pink: #ff69b4;
+            --accent-green: #00ff9d;
             --dark: #1a1a2e;
             --light: #f8f9fa;
         }
@@ -18,22 +19,23 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: var(--dark);
+            background-color: var(--primary-blue);
             color: var(--light);
             line-height: 1.6;
             overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: rgba(8, 81, 238, 0.9);
             padding: 1.5rem;
             text-align: center;
             position: relative;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid var(--accent-green);
         }
         
         .logo-container {
@@ -61,19 +63,22 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-family: 'Righteous', cursive;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: white;
         }
         
         .symbol {
-            background: var(--accent);
+            background: var(--accent-green);
             color: var(--dark);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-weight: bold;
             display: inline-block;
             margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
         }
         
         .container {
@@ -86,20 +91,29 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 2rem;
-            background: rgba(42, 42, 72, 0.6);
+            background: rgba(8, 81, 238, 0.7);
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--accent-pink);
         }
         
         .intro h2 {
-            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--accent);
+            color: var(--accent-green);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .intro p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--accent-pink), var(--accent-green));
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 30px;
@@ -108,6 +122,7 @@
             margin-top: 1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-family: 'Montserrat', sans-serif;
         }
         
         .cta-button:hover {
@@ -137,13 +152,14 @@
         }
         
         .social-card {
-            background: rgba(42, 42, 72, 0.6);
+            background: rgba(8, 81, 238, 0.7);
             border-radius: 15px;
             padding: 1.5rem;
             width: 180px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--accent-pink);
         }
         
         .social-card:hover {
@@ -159,7 +175,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-green));
         }
         
         .social-icon img {
@@ -170,7 +186,8 @@
         
         .social-card h3 {
             margin-bottom: 0.5rem;
-            color: var(--accent);
+            color: var(--accent-green);
+            font-family: 'Montserrat', sans-serif;
         }
         
         .social-card a {
@@ -181,23 +198,90 @@
             font-weight: bold;
         }
         
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(26, 26, 46, 0.8);
-            margin-top: 3rem;
+        .media-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+            justify-content: center;
         }
         
-        .disclaimer {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 0.9rem;
-            color: #aaa;
+        .media-item {
+            flex: 1 1 45%;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            background: rgba(8, 81, 238, 0.7);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--accent-green);
+        }
+        
+        .media-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .media-content {
+            flex: 1;
+            padding: 1rem;
+        }
+        
+        .media-content h3 {
+            font-family: 'Righteous', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent-pink);
+        }
+        
+        .media-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .media-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .media-img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .media-video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .buy-section {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(8, 81, 238, 0.7);
+            border-radius: 15px;
+            border: 2px solid var(--accent-pink);
+        }
+        
+        .buy-section h2 {
+            color: var(--accent-green);
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
         }
         
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            
+            .media-item {
+                flex-direction: column !important;
             }
             
             .socials {
@@ -228,7 +312,7 @@
         .particle {
             position: absolute;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--accent-pink), var(--accent-green));
             opacity: 0.3;
             animation: float 15s infinite linear;
         }
@@ -242,17 +326,10 @@
             }
         }
         
-        .buy-section {
-            text-align: center;
-            margin: 3rem 0;
-            padding: 2rem;
-            background: rgba(42, 42, 72, 0.6);
-            border-radius: 15px;
-        }
-        
-        .buy-section h2 {
-            color: var(--accent);
-            margin-bottom: 1.5rem;
+        .bullish-text {
+            font-family: 'Righteous', cursive;
+            color: var(--accent-green);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -284,6 +361,70 @@
             <p>2. Add Base network to your wallet</p>
             <p>3. Swap ETH for $MRSKURT on Uniswap</p>
             <a href="https://app.uniswap.org/explore/tokens/base/0x3ef96Ab2e783C939Cf007af8dBa350cF66128934" class="cta-button">Buy on Uniswap</a>
+        </section>
+        
+        <section class="media-section">
+            <div class="media-item">
+                <div class="media-content">
+                    <h3 class="bullish-text">TO THE MOON! 🚀</h3>
+                    <p>$MRSKURT is not just a memecoin, it's a movement! Join the revolution and watch your portfolio skyrocket as we conquer the Base chain and beyond!</p>
+                </div>
+                <div class="media-visual">
+                    <video class="media-video" autoplay loop muted playsinline>
+                        <source src="https://i.imgur.com/aOT75aw.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-content">
+                    <h3 class="bullish-text">100X POTENTIAL! 📈</h3>
+                    <p>Early investors in $MRSKURT are already seeing massive gains. Don't miss your chance to be part of the next big memecoin success story!</p>
+                </div>
+                <div class="media-visual">
+                    <img src="https://i.imgur.com/W97zg4r.png" alt="$MRSKURT Bullish" class="media-img">
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-content">
+                    <h3 class="bullish-text">COMMUNITY POWER! 💪</h3>
+                    <p>The $MRSKURT community is stronger than ever! With thousands of holders and growing, we're building something truly special together.</p>
+                </div>
+                <div class="media-visual">
+                    <img src="https://i.imgur.com/bAXkRTc.png" alt="$MRSKURT Community" class="media-img">
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-content">
+                    <h3 class="bullish-text">FOMO IS REAL! 😱</h3>
+                    <p>Don't be the one who missed out on $MRSKURT! Get in now before the next massive pump. This rocket ship is leaving the station!</p>
+                </div>
+                <div class="media-visual">
+                    <img src="https://i.imgur.com/UHVIxg5.png" alt="Don't miss $MRSKURT" class="media-img">
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-content">
+                    <h3 class="bullish-text">BASED ON BASE! 🔵</h3>
+                    <p>Built on Coinbase's Base blockchain, $MRSKURT has the solid foundation needed for long-term success and massive adoption!</p>
+                </div>
+                <div class="media-visual">
+                    <img src="https://i.imgur.com/hdPiJ9q.png" alt="$MRSKURT on Base" class="media-img">
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-content">
+                    <h3 class="bullish-text">LEGENDARY STATUS! 👑</h3>
+                    <p>$MRSKURT isn't just another memecoin - it's destined for legendary status in the crypto history books. Get your bags packed now!</p>
+                </div>
+                <div class="media-visual">
+                    <img src="https://i.imgur.com/NlyEXBS.png" alt="$MRSKURT Legendary" class="media-img">
+                </div>
+            </div>
         </section>
         
         <section class="dexscreener">
@@ -330,13 +471,6 @@
             </div>
         </section>
     </div>
-    
-    <footer>
-        <div class="disclaimer">
-            <p><strong>Disclaimer:</strong> $MRSKURT is the most bullish token on base</p>
-            <p>© 2025 Mrs Kurt ($MRSKURT). All rights reserved.</p>
-        </div>
-    </footer>
 
     <script>
         // Create background particles
@@ -364,4 +498,4 @@
         });
     </script>
 </body>
-  </html>
+</html>
